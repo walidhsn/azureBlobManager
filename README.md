@@ -7,7 +7,7 @@ Azure Blob Manager is a full-stack application built with Angular and Spring Boo
 
 Before running Azure Blob Manager, ensure you have completed the following steps:
 
-1. **Create an Azure Storage Account**: Create an Azure Storage Account with anonymous access enabled. This allows public access to blobs via a URL without requiring authentication.
+1. **Create an Azure Storage Account**: Create an Azure Storage Account with anonymous access enabled. This allows public access to blobs via a URL.
 2. **Generate a SAS (Shared Access Signature) Token**: Generate a SAS token with a long expiration date (e.g., 2099) and grant it permissions to all resource types. This token will be used by Azure Blob Manager to access your storage account.
 3. **Create a Container**: Create a container within your Azure Storage Account and set the access level to "Blob (anonymous read access for blobs only)". This ensures that blobs can be accessed publicly via URL.
 4. **XAMPP:** Install XAMPP, which includes Apache HTTP Server, MySQL database, and PHP. XAMPP provides an easy-to-install Apache distribution containing MariaDB, PHP, and Perl. You can download XAMPP from [here](https://www.apachefriends.org/index.html) and follow the installation instructions.

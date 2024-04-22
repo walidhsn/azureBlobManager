@@ -1,0 +1,30 @@
+.content {
+  padding-top: 10px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.action {
+  padding: 0px 25px 20px;
+  button {
+    flex: 1;
+  }
+}
+
+.blue-span {
+  color:rgb(56, 111, 238);
+}
+
+/* Apply fixed size and rounded corners to images */
+.rounded-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px; // Adjust the radius as needed
+}
+

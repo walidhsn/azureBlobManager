@@ -1,0 +1,83 @@
+<div mat-dialog-title>
+  <h1>Form</h1>
+</div>
+<form [formGroup]="todoForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Write description"
+          formControlName="description"
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <input
+        type="file"
+        (change)="onFileSelected($event)"
+        accept="image/*,video/*,audio/*, application/x-rar-compressed, application/pdf, text/plain, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, text/csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        formControlName="file"
+      />
+    </div>
+    <br />
+    <span *ngIf="uploadProgress !== 0"
+      >Please wait, as this may take a while...</span
+    >
+    <mat-progress-bar
+      [mode]="uploadProgress !== 0 ? 'indeterminate' : 'determinate'"
+      [value]="uploadProgress"
+    ></mat-progress-bar>
+    <br />
+    <div class="row">
+      <!-- Display file name if it's not an image in the Add mod-->
+      <span
+        class="blue-span"
+        *ngIf="selectedFile && !isImageFile(selectedFile?.name ?? '')"
+      >
+        {{ _filename }}
+      </span>
+      <!-- Display file name if it's not an image in the edit mode -->
+      <span
+        class="blue-span"
+        *ngIf="
+          data && !isImageFile(todoForm.get('fileName')?.value) && !selectedFile
+        "
+      >
+        {{ _filename }}
+      </span>
+      <!-- Display image preview if file is an image in the Add mode -->
+      <img
+        *ngIf="
+          selectedFile && isImageFile(selectedFile?.name ?? '') && imageSrc
+        "
+        [src]="imageSrc"
+        alt="Image Preview"
+        class="rounded-image"
+      />
+
+      <!-- Display image preview if file is an image in the edit mode -->
+      <img
+        *ngIf="
+          data &&
+          isImageFile(todoForm.get('fileName')?.value) &&
+          !selectedFile &&
+          imageSrc
+        "
+        [src]="imageSrc"
+        alt="Image Preview"
+        class="rounded-image"
+      />
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      {{ data ? "Update" : "Save" }}
+    </button>
+  </div>
+</form>

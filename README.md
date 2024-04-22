@@ -28,7 +28,7 @@ Please note that the maximum file size allowed for uploads to the Spring server 
 
 ## File Manipulation Services !Services
 
-The backend provides a set of microservices for file manipulation, including download, upload, update, and delete operations. You can leverage these services to manage your files efficiently.
+The backend provides a set of microservices for file manipulation, including download, upload, update, and delete operations. You can leverage these services to manage your files efficiently, you can upload any type of file (image,video,audio,pdf,txt,....) .
 
 ## Getting Started 
 

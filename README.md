@@ -1,4 +1,5 @@
-# Azure Blob Manager ![version](https://img.shields.io/badge/version-1.0.0-blue) ![Angular](https://img.shields.io/badge/Angular-15-red) ![SpringBoot](https://img.shields.io/badge/SpringBoot-green)
+# Azure Blob Manager ![version](https://img.shields.io/badge/version-1.0.0-blue) ![Angular](https://img.shields.io/badge/Angular-15-red) ![SpringBoot](https://img.shields.io/badge/SpringBoot-green) 
+<img src="https://skillicons.dev/icons?i=azure"/>
 
 Azure Blob Manager is a full-stack application built with Angular and Spring Boot designed to simplify the management of Azure Blob Storage resources, allowing users to upload, update, download, and delete files effortlessly.
 

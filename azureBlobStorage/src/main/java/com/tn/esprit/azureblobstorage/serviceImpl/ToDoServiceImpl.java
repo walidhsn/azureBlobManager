@@ -51,7 +51,7 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     public void delete(ToDo toDo) {
-        if(!toDo.getFileName().isEmpty()){
+        if(toDo.getFileName() != null && !toDo.getFileName().isEmpty()){
             blobService.deleteFile(toDo.getFileName());
         }
         toDoRepository.delete(toDo);

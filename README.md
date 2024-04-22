@@ -27,7 +27,7 @@ azure.blob.container=YOUR_CONTAINER_NAME
 
 Please note that the maximum file size allowed for uploads to the Spring server is 100MB. Additionally, the maximum request size is also limited to 100MB.
 
-## File Manipulation Services !Services
+## File Manipulation Services
 
 The backend provides a set of microservices for file manipulation, including download, upload, update, and delete operations. You can leverage these services to manage your files efficiently, you can upload any type of file (image,video,audio,pdf,txt,....) .
 
